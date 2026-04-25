@@ -8,8 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
-
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "\"user\"")
@@ -23,7 +23,7 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_user")
-    private Long id_user;
+    private Long idUser;
 
     @NotBlank
     @Column(name = "name", nullable = false)
@@ -40,10 +40,15 @@ public class User {
 
     @NotBlank
     @Column(name = "type_user", updatable = false)
-    private String type_user;
+    private String typeUser;
 
     @CreationTimestamp
     @Column(name = "creation_date", updatable = false)
     private LocalDateTime creationDateUser;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Address adress;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    private List<Telephone> telephone;
 }

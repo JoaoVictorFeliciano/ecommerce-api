@@ -13,12 +13,13 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Adress {
+
+public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_adress")
-    private Long id_adress;
+    @Column(name = "id_address")
+    private Long idAddress;
 
     @OneToOne
     @JoinColumn(name = "id_user", nullable = false)
@@ -34,7 +35,7 @@ public class Adress {
 
     @NotBlank
     @Column(name = "house_number", nullable = false)
-    private String house_number;
+    private String houseNumber;
 
     @NotBlank
     @Column(name = "city", nullable = false)
