@@ -1,18 +1,14 @@
 package com.joaofeliciano.ecommerce_api.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "cart")
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 

@@ -2,16 +2,13 @@ package com.joaofeliciano.ecommerce_api.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "product")
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 
