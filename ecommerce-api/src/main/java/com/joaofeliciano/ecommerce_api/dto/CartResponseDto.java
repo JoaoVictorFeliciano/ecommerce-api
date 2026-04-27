@@ -9,8 +9,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ProductResponseDto {
-    private Long idProduct;
-    private LocalDateTime creationDateProduct;
-    private boolean active;
+public class CartResponseDto {
+    private Long idCart;
+    private Long idUser;
+    private LocalDateTime creationDateCart;
 }

@@ -3,14 +3,13 @@ package com.joaofeliciano.ecommerce_api.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ProductResponseDto {
-    private Long idProduct;
-    private LocalDateTime creationDateProduct;
-    private boolean active;
+public class CategoryResponseDto {
+    private Long idCategory;
+    private String name;
+    private String description;
 }

@@ -1,16 +1,17 @@
 package com.joaofeliciano.ecommerce_api.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ProductResponseDto {
-    private Long idProduct;
-    private LocalDateTime creationDateProduct;
-    private boolean active;
+public class CartRequestDto {
+
+    @NotNull(message = "Id user is required.")
+    private Long idUser;
+
 }

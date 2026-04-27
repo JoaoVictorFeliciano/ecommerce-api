@@ -3,14 +3,16 @@ package com.joaofeliciano.ecommerce_api.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
+import java.math.BigDecimal;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class ProductResponseDto {
+public class ItemOrderResponseDto {
+    private Long idItemOrder;
+    private Long idOrder;
     private Long idProduct;
-    private LocalDateTime creationDateProduct;
-    private boolean active;
+    private Integer quantity;
+    private BigDecimal unitaryPrice;
 }
