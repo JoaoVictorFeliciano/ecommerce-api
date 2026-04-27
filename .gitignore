@@ -1,5 +1,6 @@
 # Maven
 target/
+!.mvn/wrapper/maven-wrapper.jar
 
 # IntelliJ
 .idea/
@@ -7,6 +8,7 @@ target/
 
 # Logs
 *.log
+logs/
 
 # Compiled files
 *.class
@@ -27,8 +29,9 @@ Thumbs.db
 # Environment variables
 .env
 
-# Node (caso tenha frontend depois)
-node_modules/
+# Spring Boot sensitive files
+src/main/resources/application.properties
+src/main/resources/application.yml
 
-# Spring Boot
-logs/
+# Front end
+node_modules/
