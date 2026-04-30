@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
 @Service
 public class UserService {
 
@@ -87,7 +86,6 @@ public class UserService {
     public void deleteUser(Long id) throws InvalidId{
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new InvalidId("This user is not found."));
-
         userRepository.delete(user);
     }
 }

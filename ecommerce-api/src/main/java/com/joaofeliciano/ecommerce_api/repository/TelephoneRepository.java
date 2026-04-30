@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TelephoneRepository extends JpaRepository<Telephone, Long> {
+    boolean getTelephoneByIdTelephone(Long idTelephone);
 }
