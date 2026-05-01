@@ -3,8 +3,10 @@ package com.joaofeliciano.ecommerce_api.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "product")
@@ -39,4 +41,8 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "id_category", nullable = false)
     private Category category;
+
+    @CreationTimestamp
+    @Column(name = "creation_date", updatable = false)
+    private LocalDateTime creationDateProduct;
 }
