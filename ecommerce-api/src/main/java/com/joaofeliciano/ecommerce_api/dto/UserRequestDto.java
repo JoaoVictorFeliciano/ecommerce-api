@@ -27,4 +27,5 @@ public class UserRequestDto {
     @NotBlank(message = "Type User is required")
     private String typeUser;
 
+
 }

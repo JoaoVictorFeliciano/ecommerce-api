@@ -1,6 +1,7 @@
 package com.joaofeliciano.ecommerce_api.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,4 +29,6 @@ public class AddressRequestDto {
     @NotBlank(message = "State is required.")
     private String state;
 
+    @NotNull(message = "User is required.")
+    private Long idUser;
 }
