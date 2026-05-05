@@ -1,2 +1,2 @@
 # ecommerce-api
-teste!
+Ecommerce-api focused in basic fuctions.
